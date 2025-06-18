@@ -16,7 +16,7 @@ func main() {
 
 	// Create Kafka reader for persist topic
 	reader := kafka.NewReader(kafka.ReaderConfig{
-		Brokers:  []string{"kafka:9092"},
+		Brokers:  []string{"localhost:9092"},
 		Topic:    "persist",
 		GroupID:  "persistence-group",
 		MinBytes: 10e3, // 10KB
